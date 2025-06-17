@@ -1,6 +1,58 @@
-body {
-    background-color: black;
+:root {
+    --bg-color: #2b3339;           /* Background */
+    --text-primary: #d3c6aa;       /* Main foreground */
+    --text-secondary: #a7c080;     /* Secondary text (subtle green) */
+    --accent-color: #7fbbb3;       /* Cyan accent */
+    --highlight-color: #e67e80;    /* Red/pink highlight */
+    --card-bg: #3c4841;            /* Slightly lighter panel */
+    --border-color: #5c6a72;       /* Muted border */
+    --gradient-start: #7fbbb3;     /* Accent cyan */
+    --gradient-end: #d699b6;       /* Lavender pink */
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    font-family: 'IBM Plex Mono', monospace;
+    padding: 20px;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    justify-content: center;
+    align-items: center;
+}
+
+
 .info {
-    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 2rem;
+    background: linear-gradient(135deg, var(--bg-color) 0%, rgba(15, 15, 15, 0.8) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--card-bg);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
 }
